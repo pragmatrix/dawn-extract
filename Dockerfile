@@ -19,5 +19,4 @@ RUN git clone https://dawn.googlesource.com/dawn dawn
 
 RUN pip install jinja2
 
-RUN cd dawn && python3 generator/dawn_json_generator.py --dawn-json dawn.json --wire-json dawn_wire.json --template-dir generator/templates --targets headers --output-dir .
-RUN cd dawn && python3 generator/dawn_json_generator.py --dawn-json dawn.json --wire-json dawn_wire.json --template-dir generator/templates --targets cpp_headers --output-dir .
+RUN cd dawn && python3 generator/dawn_json_generator.py --dawn-json dawn.json --wire-json dawn_wire.json --template-dir generator/templates --targets headers,cpp_headers --output-dir .
